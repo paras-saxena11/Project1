@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+    int n;
+    srand(time(0));
+    n=rand()%100;
+    printf("Generated random no. is%d\n", n);
+
+    int g;
+    int i=1;
+    do{ 
+         printf("Guess the no:\n");
+         scanf("%d", &g);
+
+        if(n>g)
+        {
+            printf("Please enter the higher no.:\n");
+        }
+        else if(n<g)
+        {
+            printf("Please enter the lower no.:\n");
+        }
+        else if(n=g)
+        {
+            printf("You had guessed the no in %d times:", i);
+        
+        }i++;
+    }while(n!=g);
+    return 0;
+}
